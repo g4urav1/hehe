@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: pink;
+        height: 100dvh;
+    }
+
+    input {
+        margin: 10px;
+        border: none;
+        padding: 5px 10px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    button {
+        font-weight: 700;
+        width: 100px;
+        height: 50px;
+        border-radius: 25px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        transition: all ease 50ms;
+        box-shadow: 4px 4px 8px 4px rgb(255, 152, 169),
+            -4px -4px 8px 4px rgb(255, 212, 220);
+    }
+
+
+    button:active {
+        box-shadow: 4px 4px 8px 4px rgb(255, 152, 169)inset,
+            -4px -4px 8px 4px rgb(255, 212, 220)inset;
+        transform: scale(0.80);
+    }
+
+    #demo{display: flex;
+    flex-wrap: wrap;
+justify-content: center;
+align-items: center;}
+
+    #demo div{margin: 10px;}
+</style>
+
+<body>
+    <button onclick="apology()" id="btn" class="btn">CLICK HERE</button>
+    <p id="demo"></p>
+</body>
+<script>
+    function apology() {
+        let x = ""
+
+        for (let i = 1; i < 101; i++) {
+            x += "<div>" +i + ": " + "sorry" + "<br>" + "</div>";
+        }
+        document.getElementById("demo").innerHTML = x
+    }
+</script>
+
+</html>
